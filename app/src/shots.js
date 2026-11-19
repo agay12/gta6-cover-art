@@ -27,6 +27,9 @@ export async function runShots() {
   if (q.get('badge')) document.getElementById('badge').value = q.get('badge');
   if (q.get('layout')) document.getElementById('layout').value = q.get('layout');
   if (q.get('grade')) document.getElementById('grade').value = q.get('grade');
+  if (q.get('shot') === 'cover') document.body.classList.add('cover-only');
+  else document.body.classList.add('editor-only');
+  try { await document.fonts.load('700 100px PosterTitle'); } catch {}
   const w = +q.get('w') || 1080;
   const h = +q.get('h') || 1080;
   for (const b of document.querySelectorAll('.size')) {

@@ -8,6 +8,7 @@
 </head>
 <body>
 <main class="app">
+  <aside class="side">
   <header class="brand">
     <h1>VICE POSTER FORGE</h1>
     <p class="tag">Turn a photo and a caption into GTA 6-style cover art. Offline. Nothing leaves your machine.</p>
@@ -40,10 +41,12 @@
     <button id="export" type="button">Export PNG</button>
     <p id="status" role="status"></p>
   </section>
+  </aside>
   <section class="stage">
     <canvas id="cover" width="1080" height="1080" aria-label="Cover preview"></canvas>
   </section>
 </main>
+<script>window.onerror = (m, s, l) => { document.title = 'ERR ' + m + ' @' + (s||'').split('/').pop() + ':' + l; };</script>
 <script type="module" src="./src/shots.js"></script>
 </body>
 </html>

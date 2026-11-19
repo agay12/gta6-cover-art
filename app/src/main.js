@@ -1,5 +1,5 @@
 // main.js — wires the editor UI to the poster engine and handles PNG export.
-import { drawPoster, GRADES, LAYOUTS } from './poster.js';
+import { drawPoster } from './poster.js';
 
 const canvas = document.getElementById('cover');
 const photoInput = document.getElementById('photos');

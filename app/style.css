@@ -14,9 +14,20 @@ body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   min-height: 100%;
 }
+@font-face {
+  font-family: "PosterTitle";
+  src: url("./fonts/anton.ttf") format("truetype");
+  font-display: swap;
+}
+.side { display: flex; flex-direction: column; gap: 8px; }
+body.cover-only .side { display: none; }
+body.cover-only { background: #000; }
+body.cover-only .app { grid-template-columns: 1fr; padding: 0; gap: 0; max-width: none; }
+body.cover-only .stage { background: #000; border: 0; padding: 0; }
+body.cover-only #cover { max-height: 100vh; max-width: 100vw; border-radius: 0; box-shadow: none; }
 .app {
   display: grid;
-  grid-template-columns: 330px minmax(0, 1fr);
+  grid-template-columns: 340px minmax(0, 1fr);
   gap: 24px;
   padding: 24px;
   align-items: start;
